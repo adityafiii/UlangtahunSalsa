@@ -257,14 +257,13 @@ body {
     color: var(--text-primary);
 } */
 /* Gift Box Screen */
-#gift-screen {
-    height: 100vh; /* Mengunci tinggi agar pas satu layar */
-    overflow: hidden; /* Mengunci agar tidak bisa di-scroll sama sekali */
+#passcode-screen {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Kembalikan ke center seperti aslinya */
+    justify-content: center;
     align-items: center;
-    padding: 30px 20px;
+    padding: 30px 24px;
     text-align: center;
 }
 
@@ -1154,22 +1153,4 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Paksa Gift Screen pakai flexbox saat aktif & kunci di atas */
-#gift-screen.active {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    height: 100vh !important;
-    max-height: 100vh !important;
-    overflow: hidden !important;
-    padding-top: 50px !important; /* Jarak kado dari ujung atas layar */
-}
-
-/* Rapikan jarak teks prompt */
-#gift-screen .gift-prompt {
-    margin-top: 0 !important;
-    margin-bottom: 25px !important;
 }
