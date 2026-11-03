@@ -267,23 +267,41 @@ body {
     align-items: center;
     transform: translateY(-15vh); 
 } */
-#gift-screen {
+/* #gift-screen {
     min-height: 100vh;
     display: flex; 
     flex-direction: column;
-    justify-content: flex-start; /* Menarik konten ke bagian atas layar */
+    justify-content: flex-start;
     align-items: center;
-    padding: 5vh 20px 30px; /* 15vh adalah jarak kado dari ujung atas layar */
+    padding: 5vh 20px 30px; 
     text-align: center;
-    overflow: hidden; /* Mengunci layar agar tidak bisa di-scroll */
+    overflow: hidden; 
 }
 .gift-prompt {
     font-family: 'Playfair Display', serif;
     font-size: 1.35rem;
     margin-bottom: 40px;
     color: var(--text-primary);
+} */
+/* Gift Box Screen */
+#gift-screen {
+    height: 100vh; /* Mengunci tinggi agar pas satu layar */
+    overflow: hidden; /* Mengunci agar tidak bisa di-scroll sama sekali */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Kembalikan ke center seperti aslinya */
+    align-items: center;
+    padding: 30px 20px;
+    text-align: center;
 }
 
+.gift-prompt {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    margin-bottom: 40px;
+    color: var(--text-primary);
+    margin-top: -25vh; /* Ini trik amannya: menarik teks dan kado sekaligus ke atas */
+}
 .gift-box-container {
     position: relative;
     width: 170px;
