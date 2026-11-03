@@ -273,7 +273,7 @@ body {
     flex-direction: column;
     justify-content: flex-start; /* Menarik konten ke bagian atas layar */
     align-items: center;
-    padding: 15vh 20px 30px; /* 15vh adalah jarak kado dari ujung atas layar */
+    padding: 5vh 20px 30px; /* 15vh adalah jarak kado dari ujung atas layar */
     text-align: center;
     overflow: hidden; /* Mengunci layar agar tidak bisa di-scroll */
 }
