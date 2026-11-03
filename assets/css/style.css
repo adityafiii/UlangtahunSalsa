@@ -285,7 +285,7 @@ body {
 } */
 /* Gift Box Screen */
 #gift-screen {
-    height: 100vh; /* Mengunci tinggi agar pas satu layar */
+    height: 100px; /* Mengunci tinggi agar pas satu layar */
     overflow: hidden; /* Mengunci agar tidak bisa di-scroll sama sekali */
     display: flex;
     flex-direction: column;
