@@ -142,6 +142,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 800);
     }, 1600);
 
+    // --- Scroll Lock & Reset Helper ---
+    function forceScrollToTop() {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        if (document.scrollingElement) {
+            document.scrollingElement.scrollTop = 0;
+        }
+        const wrapper = document.querySelector('.mobile-wrapper');
+        if (wrapper) wrapper.scrollTop = 0;
+    }
+
     // --- Passcode Logic ---
     const SECRET_PIN = "041103";
     let enteredPin = "";
@@ -182,9 +194,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     // Correct PIN!
                     setTimeout(() => {
                         passcodeScreen.classList.remove('active');
+                        forceScrollToTop();
                         setTimeout(() => {
                             giftScreen.classList.add('active');
-                        }, 300);
+                            forceScrollToTop();
+                            setTimeout(forceScrollToTop, 50);
+                            setTimeout(forceScrollToTop, 150);
+                        }, 250);
                     }, 400);
                 } else {
                     // Wrong PIN!
@@ -249,7 +265,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Start background music automatically upon opening gift
         audio.play().catch(e => console.log("Audio play gesture error:", e));
 
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        forceScrollToTop();
+        requestAnimationFrame(forceScrollToTop);
+        setTimeout(forceScrollToTop, 30);
+        setTimeout(forceScrollToTop, 100);
+        setTimeout(forceScrollToTop, 250);
+        setTimeout(forceScrollToTop, 500);
     });
 
     // Simple confetti generator
