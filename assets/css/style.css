@@ -248,7 +248,7 @@ body {
     text-align: center;
 } */
 
-#gift-screen {
+/* #gift-screen {
     height: 300vh;
     min-height: 100vh
     overflow: hidden;
@@ -258,6 +258,15 @@ body {
     padding-top: 15vh;
     align-items: center;
     text-align: center;
+} */
+#gift-screen {
+    min-height: 100vh !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Menarik paksa seluruh isi layar kado ke atas */
+    transform: translateY(-15vh); 
 }
 
 .gift-prompt {
