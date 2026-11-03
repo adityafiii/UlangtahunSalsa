@@ -249,7 +249,7 @@ body {
 } */
 
 #gift-screen {
-    height: 100vh;
+    height: 300vh;
     min-height: 100vh
     overflow: hidden;
     display: flex;
