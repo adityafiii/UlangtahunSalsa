@@ -1155,3 +1155,9 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* Mengunci layar penuh hanya saat kado ditampilkan */
+body:has(#gift-screen.active) {
+    overflow: hidden !important;
+    height: 100vh !important;
+}
