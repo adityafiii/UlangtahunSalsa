@@ -259,16 +259,24 @@ body {
     align-items: center;
     text-align: center;
 } */
-#gift-screen {
+/* #gift-screen {
     min-height: 100vh !important;
     display: flex !important;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* Menarik paksa seluruh isi layar kado ke atas */
     transform: translateY(-15vh); 
+} */
+#gift-screen {
+    min-height: 100vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start; /* Menarik konten ke bagian atas layar */
+    align-items: center;
+    padding: 15vh 20px 30px; /* 15vh adalah jarak kado dari ujung atas layar */
+    text-align: center;
+    overflow: hidden; /* Mengunci layar agar tidak bisa di-scroll */
 }
-
 .gift-prompt {
     font-family: 'Playfair Display', serif;
     font-size: 1.35rem;
@@ -1154,10 +1162,4 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* Mengunci layar penuh hanya saat kado ditampilkan */
-body:has(#gift-screen.active) {
-    overflow: hidden !important;
-    height: 100vh !important;
 }
