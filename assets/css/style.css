@@ -237,26 +237,6 @@ body {
 }
 
 /* Gift Box Screen */
-
-/* #gift-screen {
-    height: 300vh;
-    min-height: 100vh
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding-top: 15vh;
-    align-items: center;
-    text-align: center;
-}
-
-.gift-prompt {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.35rem;
-    margin-bottom: 40px;
-    color: var(--text-primary);
-} */
-/* Gift Box Screen */
 #gift-screen {
     min-height: 100vh;
     display: flex;
@@ -272,7 +252,6 @@ body {
     font-size: 1.35rem;
     margin-bottom: 40px;
     color: var(--text-primary);
-    margin-top: -25vh; /* Ini trik amannya: menarik teks dan kado sekaligus ke atas */
 }
 
 .gift-box-container {
@@ -1153,45 +1132,4 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* ==========================================
-   FIX POSISI GIFT BOX & MAIN CELEBRATION
-   ========================================== */
-
-/* 1. Memaksa Gift Screen ke Atas & Kunci Scroll */
-#gift-screen,
-#gift-screen.active {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important; /* Tarik posisi kado ke atas */
-    align-items: center !important;
-    height: 100vh !important;
-    max-height: 100vh !important;
-    overflow: hidden !important; /* Kunci layar agar tidak bisa di-scroll */
-    padding-top: 50px !important; /* Jarak dari ujung paling atas layar HP */
-    box-sizing: border-box !important;
-}
-
-/* Merapikan jarak teks "Tap the gift box..." */
-#gift-screen .gift-prompt {
-    margin-top: 0 !important;
-    margin-bottom: 25px !important;
-}
-
-/* 2. Memastikan Wrapper Utama Tidak Bisa Di-scroll Saat Kado Muncul */
-.mobile-wrapper:has(#gift-screen.active) {
-    height: 100vh !important;
-    overflow: hidden !important;
-}
-
-/* 3. Menaikkan Ucapan "Your Special Day" (Main Screen) */
-.hero-section {
-    padding-top: 15px !important; /* Dikurangi dari 50px agar langsung terlihat */
-    padding-bottom: 20px !important;
-}
-
-.hero-section .tag-badge {
-    margin-top: 0 !important;
-    margin-bottom: 12px !important;
 }
