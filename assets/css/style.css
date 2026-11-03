@@ -237,13 +237,25 @@ body {
 }
 
 /* Gift Box Screen */
-#gift-screen {
+
+/* #gift-screen {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 30px 20px;
+    text-align: center;
+} */
+
+#gift-screen {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 15vh;
+    align-items: center;
     text-align: center;
 }
 
