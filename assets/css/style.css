@@ -268,13 +268,6 @@ body {
 }
 
 .gift-prompt {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 24px;
-    text-align: center;
     font-family: 'Playfair Display', serif;
     font-size: 1.35rem;
     margin-bottom: 40px;
