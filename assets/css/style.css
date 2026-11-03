@@ -238,17 +238,7 @@ body {
 
 /* Gift Box Screen */
 
-/* #gift-screen {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 20px;
-    text-align: center;
-} */
-
-/* #gift-screen {
+#gift-screen {
     height: 300vh;
     min-height: 100vh
     overflow: hidden;
@@ -258,41 +248,6 @@ body {
     padding-top: 15vh;
     align-items: center;
     text-align: center;
-} */
-/* #gift-screen {
-    min-height: 100vh !important;
-    display: flex !important;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(-15vh); 
-} */
-/* #gift-screen {
-    min-height: 100vh;
-    display: flex; 
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 5vh 20px 30px; 
-    text-align: center;
-    overflow: hidden; 
-}
-.gift-prompt {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.35rem;
-    margin-bottom: 40px;
-    color: var(--text-primary);
-} */
-/* Gift Box Screen */
-#gift-screen {
-    height: 100vh; /* Mengunci tinggi agar pas satu layar */
-    overflow: hidden; /* Mengunci agar tidak bisa di-scroll sama sekali */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Kembalikan ke center seperti aslinya */
-    align-items: center;
-    padding: 30px 20px;
-    text-align: center;
 }
 
 .gift-prompt {
@@ -300,8 +255,8 @@ body {
     font-size: 1.35rem;
     margin-bottom: 40px;
     color: var(--text-primary);
-    margin-top: -100vh; /* Ini trik amannya: menarik teks dan kado sekaligus ke atas */
 }
+
 .gift-box-container {
     position: relative;
     width: 170px;
