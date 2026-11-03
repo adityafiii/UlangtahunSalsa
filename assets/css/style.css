@@ -257,7 +257,7 @@ body {
     color: var(--text-primary);
 } */
 /* Gift Box Screen */
-#passcode-screen {
+#gift-screen {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
