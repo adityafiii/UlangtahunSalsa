@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Happy Birthday Salsa ku Sayang ✨</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+</head>
+<body>
+
+    <!-- Floating Audio Control Pill -->
+    <div id="audio-floating-pill" class="audio-floating-pill" style="display: none;">
+        <div id="floating-disk" class="audio-disk">🎵</div>
+        <div id="floating-label" class="audio-label">Shape of My Heart</div>
+    </div>
+
+    <!-- Mobile Frame Simulation Wrapper -->
+    <main class="mobile-wrapper">
+
+        <!-- 1. Loading Screen -->
+        <div id="loading-screen">
+            <div class="blooming-flower">🌸</div>
+            <p class="loading-text">Loading your surprise...</p>
+        </div>
+
+        <!-- 2. Passcode Screen -->
+        <section id="passcode-screen" class="screen">
+            <div class="passcode-header">
+                <div class="flower-icon">🌷</div>
+                <h2>For You, Salsa ku Sayang</h2>
+                <p>Enter the secret code</p>
+            </div>
+
+            <!-- PIN Indicators -->
+            <div class="pin-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <!-- Number Keypad -->
+            <div class="keypad">
+                <button type="button" class="key-btn" data-key="1">1</button>
+                <button type="button" class="key-btn" data-key="2">2</button>
+                <button type="button" class="key-btn" data-key="3">3</button>
+                <button type="button" class="key-btn" data-key="4">4</button>
+                <button type="button" class="key-btn" data-key="5">5</button>
+                <button type="button" class="key-btn" data-key="6">6</button>
+                <button type="button" class="key-btn" data-key="7">7</button>
+                <button type="button" class="key-btn" data-key="8">8</button>
+                <button type="button" class="key-btn" data-key="9">9</button>
+                <button type="button" class="key-btn key-action" data-key="clear">✕</button>
+                <button type="button" class="key-btn" data-key="0">0</button>
+                <button type="button" class="key-btn key-action" data-key="backspace">⌫</button>
+            </div>
+
+            <p class="passcode-hint">Hint: Tanggal, bulan, tahun lahir kamu (041103) 💗</p>
+            <p id="passcode-error" class="passcode-error">Kode salah, coba lagi yaa sayang 💗</p>
+        </section>
+
+        <!-- 3. Surprise Gift Box Screen -->
+        <section id="gift-screen" class="screen">
+            <h2 class="gift-prompt">Tap the gift box to open it 🎁</h2>
+
+            <div id="gift-box-container" class="gift-box-container">
+                <div class="gift-box">
+                    <div class="gift-bow">
+                        <div class="bow-left"></div>
+                        <div class="bow-right"></div>
+                    </div>
+                    <div class="gift-lid"></div>
+                    <div class="gift-body">
+                        <div class="gift-ribbon-vertical"></div>
+                        <div class="gift-ribbon-horizontal"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal Popup After Opening Gift -->
+        <div id="gift-modal" class="modal-overlay">
+            <div class="modal-card">
+                <div class="modal-icon">🎂</div>
+                <h3 class="modal-title">Happy Birthday!</h3>
+                <p class="modal-subtitle">The most special you 🤍</p>
+                <button id="open-celebration-btn" class="btn-primary">Buka Kado Spesial ✨</button>
+            </div>
+        </div>
+
+        <!-- 4. Main Celebration Content Screen -->
+        <section id="main-screen" class="screen">
+
+            <!-- Hero Header -->
+            <header class="hero-section">
+                <div class="tag-badge">🌸 Your Special Day 🌸</div>
+                <h1 class="hero-title">HAPPY BIRTHDAY</h1>
+                <h2 class="hero-name">SALSA KU SAYANG</h2>
+                <p class="hero-subtitle">Hari paling istimewa untuk bidadariku ✨</p>
+
+                <div class="hero-quote-box">
+                    <div class="hero-quote-date">04 November • The most special day</div>
+                    <p class="hero-quote-text">"Wishing you happiness, good health, and all your dreams come true. ✨🤍"</p>
+                </div>
+            </header>
+
+            <!-- Section 1: Digital Bouquet -->
+            <section class="content-section">
+                <div class="section-header">
+                    <div class="section-tag">— A LITTLE GIFT —</div>
+                    <h3 class="section-title">Ada bunga untuk kamu niihh</h3>
+                    <p class="section-desc">Tekan bunga nya ya, tiap bunga ada kata kata untuk kamuu hwhw</p>
+                </div>
+
+                <div class="bouquet-container">
+                    <div class="flower-grid">
+                        <div class="flower-item selected" data-message="Semoga kamu makin sayang sama aku yaa 🤍">
+                            <span class="flower-emoji">🌷</span>
+                            <span class="flower-name">Tulip</span>
+                        </div>
+                        <div class="flower-item" data-message="kamu harus selamanya bareng aku! 🌹✨">
+                            <span class="flower-emoji">🌹</span>
+                            <span class="flower-name">Rose</span>
+                        </div>
+                        <div class="flower-item" data-message="Seindah indahnya bintang dilangit tapi tetap indahan kamu hehehe 🌻">
+                            <span class="flower-emoji">🌻</span>
+                            <span class="flower-name">Sunflower</span>
+                        </div>
+                        <div class="flower-item" data-message="dua tiga ayam goreng ai lop yu sayang 🍗🌸">
+                            <span class="flower-emoji">🌸</span>
+                            <span class="flower-name">Blossom</span>
+                        </div>
+                        <div class="flower-item" data-message="Ololololooo cayank nya akooo, cantiknya akooo, imutna akooo hepi berdeyyyyyyyy 🎉🥰">
+                            <span class="flower-emoji">🌼</span>
+                            <span class="flower-name">Daisy</span>
+                        </div>
+                        <div class="flower-item" data-message="muah muah muah muah muah muah sayangggggg 💋🤍">
+                            <span class="flower-emoji">🌺</span>
+                            <span class="flower-name">Hibiscus</span>
+                        </div>
+                    </div>
+
+                    <div class="bouquet-message-card">
+                        <p id="bouquet-msg-text" class="bouquet-message-text">"Semoga kamu makin sayang sama aku yaa 🤍"</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: A Letter for You -->
+            <section class="content-section">
+                <div class="section-header">
+                    <div class="section-tag">— FROM MY HEART —</div>
+                    <h3 class="section-title">A Letter for You</h3>
+                    <p class="section-desc">Untuk seseorang yang paling manis dan paling cantik 💌</p>
+                </div>
+
+                <article class="letter-envelope">
+                    <div class="letter-salutation">My Dearest Salsa,</div>
+                    <div class="letter-body">Hawooooooooo sayangggggggggg, cieee ulang tahun nihhhhhhhh, hihihihihihihiiiyyyyy!
+
+Doa aku buat kamuuuu, semoga yang pasti kamu sehat selaluuu, di jauhkan dari segala macam penyakit, semoga kamu panjang umurrrrr sehingga bisa nemenin aku sampai tua nanti.
+
+Semoga kamu dimurahkan rezeki nya, di lapangkan dadanyaa, dikurangi gengsinyaa, emm apa lagi yaaaa, itu aja deh, doa sisanya biar aku sendiri yang panjatkan untuk kamu wkkwwk.
+
+Semoga kita bareng teruss sampai ajal yaaaa sayang, eh ngga semoga deng, kan PASTIIII, mwuehehehe. Se yakin itu aku sama kamu, kamu udah milik aku sepenuhnyaaaaa yaaaaaaaaaaa, tidak ada yang boleh ambil kamu. TITIK. Cinta mati abang ni dek wkwkw.
+
+Sekali lagi, Selamat Ulang Tahun My Love!</div>
+                    <div class="letter-signature">
+                        <p>With all my love,</p>
+                        <p class="signature-name">Dari Husband kamu, Aditya Firmansyah 🤍</p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Section 3: Our Photo Memories -->
+            <section class="content-section">
+                <div class="section-header">
+                    <div class="section-tag">— A COLLECTION OF MEMORIES —</div>
+                    <h3 class="section-title">Our Photo Memories</h3>
+                    <p class="section-desc">Tap to see it closer ✨</p>
+                </div>
+
+                <div class="photos-carousel-wrap">
+                    <!-- Polaroid 1 -->
+                    <div class="polaroid-card" style="--rot: -2deg;">
+                        <div class="polaroid-img-box">
+                            <img src="assets/images/photo_1.jpg" alt="Foto Kenangan 1" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Polaroid 2 -->
+                    <div class="polaroid-card" style="--rot: 2.5deg;">
+                        <div class="polaroid-img-box">
+                            <img src="assets/images/photo_2.jpg" alt="Foto Kenangan 2" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Polaroid 3 -->
+                    <div class="polaroid-card" style="--rot: -1.5deg;">
+                        <div class="polaroid-img-box">
+                            <img src="assets/images/photo_3.webp" alt="Foto Kenangan 3" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Polaroid 4 -->
+                    <div class="polaroid-card" style="--rot: 2deg;">
+                        <div class="polaroid-img-box">
+                            <img src="assets/images/photo_4.jpg" alt="Foto Kenangan 4" loading="lazy">
+                        </div>
+                    </div>
+
+                    <!-- Polaroid 5 -->
+                    <div class="polaroid-card" style="--rot: -2deg;">
+                        <div class="polaroid-img-box">
+                            <img src="assets/images/photo_5.jpg" alt="Foto Kenangan 5" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Special Playlist -->
+            <section class="content-section">
+                <div class="section-header">
+                    <div class="section-tag">— OUR SONGS —</div>
+                    <h3 class="section-title">Special Playlist</h3>
+                    <p class="section-desc">Songs that remind me of you 🎶</p>
+                </div>
+
+                <div class="playlist-container">
+                    <div class="player-main">
+                        <div id="album-vinyl" class="album-vinyl"></div>
+                        <h4 id="track-title" class="track-info-title">Shape of My Heart</h4>
+                        <p id="track-artist" class="track-info-artist">Backstreet Boys</p>
+
+                        <!-- Progress Bar -->
+                        <div class="player-progress-wrap">
+                            <div id="progress-bar-bg" class="progress-bar-bg">
+                                <div id="progress-bar-fill" class="progress-bar-fill"></div>
+                            </div>
+                            <div class="player-times">
+                                <span id="current-time">00:00</span>
+                                <span id="duration">00:46</span>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="player-controls">
+                            <button id="prev-btn" class="ctrl-btn" title="Previous">⏮</button>
+                            <button id="play-btn" class="ctrl-btn ctrl-btn-play" title="Play/Pause">▶</button>
+                            <button id="next-btn" class="ctrl-btn" title="Next">⏭</button>
+                        </div>
+                    </div>
+
+                    <!-- Playlist Tracks -->
+                    <div class="playlist-tracks">
+                        <div class="track-item active" data-index="0">
+                            <div class="track-item-left">
+                                <span class="track-item-icon">🎵</span>
+                                <div>
+                                    <div class="track-item-title">Shape of My Heart</div>
+                                    <div class="track-item-artist">Backstreet Boys</div>
+                                </div>
+                            </div>
+                            <span class="track-item-artist">TikTok Part</span>
+                        </div>
+
+                        <div class="track-item" data-index="1">
+                            <div class="track-item-left">
+                                <span class="track-item-icon">🎵</span>
+                                <div>
+                                    <div class="track-item-title">My Love</div>
+                                    <div class="track-item-artist">Westlife</div>
+                                </div>
+                            </div>
+                            <span class="track-item-artist">TikTok Part</span>
+                        </div>
+
+                        <div class="track-item" data-index="2">
+                            <div class="track-item-left">
+                                <span class="track-item-icon">🎵</span>
+                                <div>
+                                    <div class="track-item-title">Angel Baby</div>
+                                    <div class="track-item-artist">Troye Sivan</div>
+                                </div>
+                            </div>
+                            <span class="track-item-artist">TikTok Part</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Reasons I'm Grateful for You -->
+            <section class="content-section">
+                <div class="section-header">
+                    <div class="section-tag">— FROM MY HEART TO YOURS —</div>
+                    <h3 class="section-title">Reasons I'm Grateful for You</h3>
+                    <p class="section-desc">Shake the jar and pick a note 🫙</p>
+                </div>
+
+                <div class="jar-container">
+                    <div id="jar-graphic-wrap" class="jar-graphic-wrap" title="Klik toples untuk kocok!">
+                        <div class="jar-lid"></div>
+                        <div class="jar-graphic">
+                            <div class="jar-pills">
+                                <div class="pill-note"></div>
+                                <div class="pill-note"></div>
+                                <div class="pill-note"></div>
+                                <div class="pill-note"></div>
+                                <div class="pill-note"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button id="shake-jar-btn" class="btn-primary" style="margin-bottom: 12px;">🫙 Kocok Toples</button>
+
+                    <div class="note-reveal-box">
+                        <p id="note-reveal-text" class="note-reveal-text">"Kamu adalah wanita pertama yang bisa bikin ak berfikir 'Oh ini rasanya dicintai dengan tulus' 🤍"</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 6: Closing & Wishes -->
+            <footer class="footer-section">
+                <div class="footer-flower-tag">🌸 With all my heart 🌸</div>
+                <h3 class="footer-title">May your life always be filled with flowers</h3>
+
+                <div class="footer-card">
+                    <p class="footer-message">
+                        "Sekali lagi, di hari kamu ini aku ucapinn SELAMAT ULANG TAHUN YA SAYANGKU, LOVE YOU MOREE AND MORE"
+                    </p>
+                    <p class="footer-closing">— with all my love and prayers, Aditya Firmansyah 🤍</p>
+                </div>
+            </footer>
+
+        </section>
+
+    </main>
+
+    <!-- Lightbox Modal for Photo Zoom -->
+    <div id="lightbox-modal" class="lightbox-modal">
+        <button id="lightbox-close" class="lightbox-close">&times;</button>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="Enlarged Memory">
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/canvas-petals.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
